@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MusicAppProject</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  </head>
+
+  <body>
+  <%if flash[:errors]%>
+  <% flash[:errors].each do |error| %>
+  <%= error%>
+  <%end%>
+  <%end%>
+    <%= yield %>
+  </body>
+</html>
